@@ -1,21 +1,50 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject helpPanel;
+    public GameObject menuPanel;
+
     void Start()
     {
-        
+        helpPanel.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GameStart()
     {
-        
+        SceneManager.LoadScene("PlayScene_1");
     }
 
-    public void ButtonLog()
+    public void GameExit()
     {
-        Debug.Log("BUTTON CLICKED!");
+        Application.Quit();
     }
+
+    public void OpenHelp()
+    {
+        helpPanel.SetActive(true);
+    }
+
+    public void CloseHelp()
+    {
+        helpPanel.SetActive(false);
+    }
+
+
+    public void BackMenu()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
+
+    public void OpenMenu()
+    {
+        menuPanel.SetActive(true);
+    }
+
+    public void CloseMenu()
+    {
+        menuPanel.SetActive(false);
+    }
+
 }
