@@ -13,7 +13,7 @@ public class TitleManager : MonoBehaviour
 
     public void GameStart()
     {
-        SceneManager.LoadScene("PlayScene_1");
+        SceneManager.LoadScene("Level_1");
     }
 
     public void GameExit()

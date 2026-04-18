@@ -9,19 +9,28 @@ public class PlayerControll : MonoBehaviour
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;
+    private Animator pAni;
     private bool isGrounded;
     private float moveInput;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        pAni = GetComponent<Animator>();
     }
 
     private void Update()
     {
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        if (moveInput < 0)
+            transform.localScale = new Vector3(-1, 1, 1);
+        else if (moveInput > 0)
+            transform.localScale = new Vector3(1, 1, 1);
+
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+
+        pAni.SetBool("Walk", moveInput != 0);
     }
 
     public void OnMove(InputValue value)
@@ -36,6 +45,7 @@ public class PlayerControll : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            pAni.SetTrigger("Jump");
         }
     }
 }
