@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Boundary
+  - Item1
+  - 'Enemy '
+  - Enemy22
   layers:
   - Default
   - TransparentFX

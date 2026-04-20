@@ -154,12 +154,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c25643e88f2de142b53d88ad54d0d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControll
-  moveSpeed: 2
+  moveSpeed: 1.8
   jumpForce: 3
   groundCheck: {fileID: 5655975264057318962}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  canMove: 1
 --- !u!212 &6419073550254253009
 SpriteRenderer:
   serializedVersion: 2
