@@ -336,7 +336,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\uC870\uC791 - \uBC29\uD5A5\uD0A4\n\uC810\uD504 - Space\n\uBCC4 - \uBB34\uC801(3\uCD08)\n\uC2E0\uBC1C
-    - \uC774\uB3D9 \uC18D\uB3C4 \uC99D\uAC00\n\uC0DD\uC120 - \uC810\uD504\uB825 \uC99D\uAC00"
+    - \uC774\uB3D9 \uC18D\uB3C4 \uC99D\uAC00\n\uC0DD\uC120 - \uC810\uD504\uB825 \uC99D\uAC00(5\uCD08)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 01adc17927a6ec84c80b4e66d6b7149a, type: 2}
   m_sharedMaterial: {fileID: 4997328987202995929, guid: 01adc17927a6ec84c80b4e66d6b7149a, type: 2}

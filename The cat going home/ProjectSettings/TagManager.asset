@@ -10,6 +10,7 @@ TagManager:
   - Enemy22
   - Item2
   - Obstacle
+  - Item3
   layers:
   - Default
   - TransparentFX

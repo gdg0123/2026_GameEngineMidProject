@@ -32,6 +32,8 @@ public class PlayerControll : MonoBehaviour
     private bool Mujuck = false;
     private SpriteRenderer spriteRenderer;
 
+    private bool Jumping = false;
+
 
 
     private void Awake()
@@ -60,6 +62,15 @@ public class PlayerControll : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
 
+        }
+
+        if(Jumping)
+        {
+            jumpForce = 4.5f;
+        }
+        else
+        {
+            jumpForce = 3f;
         }
     }
 
@@ -142,7 +153,8 @@ public class PlayerControll : MonoBehaviour
             audioSource.clip = Item1Sound;
             audioSource.PlayOneShot(Item1Sound);
 
-            jumpForce = 4.5f;
+            Jumping = true;
+            Invoke(nameof(ResetJump), 5f);
 
             Destroy(collision.gameObject);
         }
@@ -151,6 +163,11 @@ public class PlayerControll : MonoBehaviour
     void ResetMujuck()
     {
         Mujuck = false;
+    }
+
+    void ResetJump()
+    {
+        Jumping = false;
     }
 
 }
