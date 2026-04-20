@@ -26431,15 +26431,15 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: 52aa5764e68961f489e7c25e91ec9ccb, type: 2}
     - target: {fileID: 4929237173231525843, guid: bf925aa94f16a5242ade61eb8536ff0e, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.9433962
+      value: 0.8490566
       objectReference: {fileID: 0}
     - target: {fileID: 4929237173231525843, guid: bf925aa94f16a5242ade61eb8536ff0e, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.82568353
+      value: 0.743534
       objectReference: {fileID: 0}
     - target: {fileID: 4929237173231525843, guid: bf925aa94f16a5242ade61eb8536ff0e, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.493948
+      value: 0.44455323
       objectReference: {fileID: 0}
     - target: {fileID: 7437150517830800172, guid: bf925aa94f16a5242ade61eb8536ff0e, type: 3}
       propertyPath: Item1Sound

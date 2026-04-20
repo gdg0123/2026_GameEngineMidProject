@@ -7,10 +7,13 @@ public class EnemyController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isMovingRight = true;
 
+    private Animator eAni;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        eAni = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -40,5 +43,10 @@ public class EnemyController : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+
+    public void OnMove()
+    {
+        
     }
 }

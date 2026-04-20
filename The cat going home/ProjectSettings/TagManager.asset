@@ -8,6 +8,8 @@ TagManager:
   - Item1
   - 'Enemy '
   - Enemy22
+  - Item2
+  - Obstacle
   layers:
   - Default
   - TransparentFX

@@ -103,9 +103,12 @@ public class PlayerControll : MonoBehaviour
             collision.GetComponent<LevelObject>().MoveToNextLevel();
         }
 
-        if(collision.CompareTag("Enemy22"))
+        if (collision.CompareTag("Enemy22"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (!Mujuck)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
 
 
@@ -117,6 +120,30 @@ public class PlayerControll : MonoBehaviour
 
             Mujuck = true;
             Invoke(nameof(ResetMujuck), 3f);
+            Destroy(collision.gameObject);
+        }
+
+        if(collision.CompareTag("Item2"))
+        {
+            
+            audioSource = GetComponent<AudioSource>();
+            audioSource.clip = Item1Sound;
+            audioSource.PlayOneShot(Item1Sound);
+
+            moveSpeed = 3f;
+
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.CompareTag("Item3"))
+        {
+
+            audioSource = GetComponent<AudioSource>();
+            audioSource.clip = Item1Sound;
+            audioSource.PlayOneShot(Item1Sound);
+
+            jumpForce = 4.5f;
+
             Destroy(collision.gameObject);
         }
     }
