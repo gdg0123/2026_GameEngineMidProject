@@ -1,27 +1,27 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class LevelObject : MonoBehaviour
 {
     public AudioClip Meow;
     private AudioSource audioSource;
-    private static LevelObject instance;
 
     public string nextLevel;
 
+
     public void MoveToNextLevel()
     {
+        GameObject soundObj = new GameObject("Meow");
+        AudioSource source = soundObj.AddComponent<AudioSource>();
+        DontDestroyOnLoad(soundObj);
 
-        instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        source.clip = Meow;
+        source.Play();
 
-        audioSource = GetComponent<AudioSource>();
-        audioSource.clip = Meow;
-        audioSource.Play();
+        Destroy(soundObj, Meow.length);
 
         SceneManager.LoadScene(nextLevel);
-
-
     }
 }

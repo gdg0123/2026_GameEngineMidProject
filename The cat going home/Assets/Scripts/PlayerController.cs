@@ -25,6 +25,7 @@ public class PlayerControll : MonoBehaviour
 
     public AudioClip Item1Sound;
     private AudioSource audioSource;
+    public AudioClip Meow;
 
     private bool canDash = true;
     private bool isDashing = false;
@@ -111,6 +112,12 @@ public class PlayerControll : MonoBehaviour
 
         if(collision.CompareTag("Finish"))
         {
+            audioSource = GetComponent<AudioSource>();
+            audioSource.clip = Meow;
+            audioSource.PlayOneShot(Meow);
+
+            DontDestroyOnLoad(Meow);
+
             collision.GetComponent<LevelObject>().MoveToNextLevel();
         }
 

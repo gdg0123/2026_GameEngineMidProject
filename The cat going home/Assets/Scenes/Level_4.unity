@@ -703,7 +703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1b4f3298092554da466cf4d18b244b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelObject
-  Meow: {fileID: 8300000, guid: 52339eff2d3f40a40bfa132cec867630, type: 3}
   nextLevel: Level_5
 --- !u!61 &375400405
 BoxCollider2D:
@@ -32336,6 +32335,10 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0.9811321
       objectReference: {fileID: 0}
+    - target: {fileID: 7437150517830800172, guid: bf925aa94f16a5242ade61eb8536ff0e, type: 3}
+      propertyPath: Meow
+      value: 
+      objectReference: {fileID: 8300000, guid: 52339eff2d3f40a40bfa132cec867630, type: 3}
     - target: {fileID: 7437150517830800172, guid: bf925aa94f16a5242ade61eb8536ff0e, type: 3}
       propertyPath: Item1Sound
       value: 
