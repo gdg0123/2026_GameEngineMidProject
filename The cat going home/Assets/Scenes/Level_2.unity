@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1b4f3298092554da466cf4d18b244b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelObject
-  Meow: {fileID: 0}
+  Meow: {fileID: 8300000, guid: 52339eff2d3f40a40bfa132cec867630, type: 3}
   nextLevel: Level_3
 --- !u!61 &375400405
 BoxCollider2D:
