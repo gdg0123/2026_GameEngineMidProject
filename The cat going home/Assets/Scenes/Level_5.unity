@@ -906,7 +906,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1b4f3298092554da466cf4d18b244b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelObject
-  nextLevel: Level_4
+  Meow: {fileID: 8300000, guid: 52339eff2d3f40a40bfa132cec867630, type: 3}
+  nextLevel: END
 --- !u!61 &375400405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23913,7 +23914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7491620002316193980, guid: 4606e1f3b3d60b64f9538d85fc88a41d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8.788361
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7491620002316193980, guid: 4606e1f3b3d60b64f9538d85fc88a41d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
