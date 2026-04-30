@@ -5,6 +5,7 @@ public class TitleManager : MonoBehaviour
 {
     public GameObject helpPanel;
     public GameObject menuPanel;
+    public GameObject scorePanel;
 
     void Start()
     {
@@ -45,6 +46,16 @@ public class TitleManager : MonoBehaviour
     public void CloseMenu()
     {
         menuPanel.SetActive(false);
+    }
+
+    public void OpenScore()
+    {
+        scorePanel.SetActive(true);
+    }
+
+    public void CloseScore()
+    {
+        scorePanel.SetActive(false);
     }
 
 

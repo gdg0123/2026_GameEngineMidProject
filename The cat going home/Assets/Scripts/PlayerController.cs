@@ -15,6 +15,10 @@ public class PlayerControll : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
 
+
+    float score;
+
+
     private Rigidbody2D rb;
     private Animator pAni;
     private bool isGrounded;
@@ -41,7 +45,10 @@ public class PlayerControll : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         pAni = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>(); }
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        score = 0f;
+    }
 
 
     private void Update()
@@ -118,6 +125,8 @@ public class PlayerControll : MonoBehaviour
 
             DontDestroyOnLoad(Meow);
 
+            HighScore.TrySet(SceneManager.GetActiveScene().buildIndex, (int)score);
+
             collision.GetComponent<LevelObject>().MoveToNextLevel();
         }
 
@@ -164,6 +173,15 @@ public class PlayerControll : MonoBehaviour
             Invoke(nameof(ResetJump), 5f);
 
             Destroy(collision.gameObject);
+        }
+
+        if (collision.CompareTag("ScoreItem"))
+        {
+            //아이템을 먹었을 때 점수를 올려줌
+            score += 10f;
+
+            Destroy(collision.gameObject);
+
         }
     }
 
