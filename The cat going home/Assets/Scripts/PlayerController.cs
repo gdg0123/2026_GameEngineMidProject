@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using Unity.VisualScripting;
 
 public class PlayerControll : MonoBehaviour
 {
@@ -125,7 +126,9 @@ public class PlayerControll : MonoBehaviour
 
             DontDestroyOnLoad(Meow);
 
-            HighScore.TrySet(SceneManager.GetActiveScene().buildIndex, (int)score);
+            //HighScore.TrySet(SceneManager.GetActiveScene().buildIndex, (int)score);
+
+            StageResultSaver.SaveStage(SceneManager.GetActiveScene().buildIndex, (int)score);
 
             collision.GetComponent<LevelObject>().MoveToNextLevel();
         }
@@ -178,7 +181,7 @@ public class PlayerControll : MonoBehaviour
         if (collision.CompareTag("ScoreItem"))
         {
             //아이템을 먹었을 때 점수를 올려줌
-            score += 10f;
+            score += collision.GetComponent<ItemObject1>().GetPoint();
 
             Destroy(collision.gameObject);
 
